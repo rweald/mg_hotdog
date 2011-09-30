@@ -17,5 +17,6 @@ module MgHotdog
     def add_part(part)
       @parts << part
     end
+
   end
 end
