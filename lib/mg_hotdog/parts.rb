@@ -8,10 +8,10 @@ module MgHotdog
       #Do Something
     end
 
-    def match?(message)
+    def match?(message, _pattern)
       puts message.body.inspect
       return false unless message.body
-      ! message.body.match(pattern).nil?
+      ! message.body.match(_pattern).nil?
     end
 
     def pattern
