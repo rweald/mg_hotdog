@@ -11,7 +11,7 @@ class HelloPart
   end
 
   def pattern
-    Regexp.new(/Hello mg_hotdog.*/)
+    Regexp.new(/Hello mg_hotdog.*/i)
   end
 
 end
