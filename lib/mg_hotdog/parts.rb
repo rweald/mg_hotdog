@@ -10,3 +10,4 @@ module MgHotdog
   end
 
 end
+
