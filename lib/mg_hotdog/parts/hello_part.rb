@@ -4,12 +4,12 @@ module MgHotdog
     def process(message, room)
       if match?(message, pattern)
         puts message.body
-        room.speak("MG Hotdog says hello #{message.user.name}") 
+        room.speak("Hello #{message.user.name}") 
       end
     end
 
     def pattern
-      Regexp.new(/Hello mg_hotdog.*/)
+      Regexp.new(/[Hh]ello mg_hotdog.*/)
     end
 
   end
