@@ -5,7 +5,7 @@ $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
 require "mg_hotdog"
 require 'mg_hotdog/parts/hello_part'
 
-robot = MgHotdog::Robot.new
+robot = MgHotdog::Robot.new(ENV["CAMPFIRE_ROOM"])
 
 #add all the different parts that we want our bot to have
 robot.add_part(MgHotdog::HelloPart.new)

@@ -1,9 +1,9 @@
 module MgHotdog
   class Robot
 
-    def initialize
+    def initialize(room_number)
       @parts = []
-      @room = Connection.open("440722") 
+      @room = Connection.open(room_number) 
     end
 
     def wake_up
