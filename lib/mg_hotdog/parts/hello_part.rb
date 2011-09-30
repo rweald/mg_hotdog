@@ -2,7 +2,7 @@ class HelloPart
   def process(message, room)
     if match?(message)
       puts message.body
-      room.speak("MG Hotdog says hello #{message.user.name}") 
+      room.speak("Hello #{message.user.name}.") 
     end
   end
 
