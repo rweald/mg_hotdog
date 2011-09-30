@@ -11,8 +11,9 @@ module MgHotdog
     def wake_up
       puts @parts.inspect
       @room.listen do |message|
+        puts message
         @parts.each do |part|
-          part.process(message, @room)
+          EM.defer { part.process(message, @room) }
         end
       end
     end   
