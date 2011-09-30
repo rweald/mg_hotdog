@@ -37,7 +37,7 @@ You can then add the part to the robot by editing bin/mg_hotdog
 ```ruby
 
 require 'mg_hotdog/parts/hello_part'
-robot.add_part(HelloPart.new)
+robot.parts << HelloPart.new
 
 ```
 And that is all it takes. 

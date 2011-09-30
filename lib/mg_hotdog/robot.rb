@@ -1,6 +1,8 @@
 module MgHotdog
   class Robot
 
+    attr_accessor :parts
+
     def initialize(room_number)
       @parts = []
       @room = Connection.open(room_number) 
@@ -14,10 +16,6 @@ module MgHotdog
         end
       end
     end   
-
-    def add_part(part)
-      @parts << part
-    end
-
   end
+
 end
