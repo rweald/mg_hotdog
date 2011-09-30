@@ -1,5 +1,6 @@
 require "mg_hotdog/version"
+require "mg_hotdob/connection"
+require "mg_hotdob/brain"
 
 module MgHotdog
-  # Your code goes here...
 end
