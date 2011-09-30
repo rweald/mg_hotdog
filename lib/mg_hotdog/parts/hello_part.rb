@@ -1,5 +1,5 @@
 class HelloPart
-  def process(message, room)
-    room.speak("Hello #{message.user.name}.") 
+  def process(message, robot)
+    robot.room.speak("Hello #{message.user.name}.") 
   end
 end
