@@ -1,21 +1,16 @@
 module MgHotdog
-  # This is a base class for all "parts" 
+  # This is the interface that all parts must implement 
   # parts are the things that actually do shit after we get a message
-  # To create a new part simply implement the same interface as this
-  # class and then add yourself to the brain
+  # To create a new part simply implement this interface and off you go
+  # Checkout the README for more information on how to create a demo a
+  # custom part
   class Part
+    def initialize
+      raise "Abstract Interace. Do not new up this class"
+    end
+
     def process(message, room = nil)
       #Do Something
-    end
-
-    def match?(message)
-      puts message.body.inspect
-      return false unless message.body
-      ! message.body.match(pattern).nil?
-    end
-
-    def pattern
-      #The regex that you want to match against to run your rule
     end
   end
 end
