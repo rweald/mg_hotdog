@@ -10,6 +10,7 @@ require 'mg_hotdog/parts/hello_part'
 robot = MgHotdog::Robot.new(ENV["CAMPFIRE_ROOM"])
 
 #add all the different parts that we want our bot to have
-robot.parts << HelloPart.new
+
+robot.listen /hello mg_hotdog/i, HelloPart.new
 
 robot.wake_up

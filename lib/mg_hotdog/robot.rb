@@ -13,10 +13,17 @@ module MgHotdog
       @room.listen do |message|
         puts message
         @parts.each do |part|
-          EM.defer { part.process(message, @room) }
+          if message.body.match(part[0])
+            EM.defer { part[1].process(message, room) }
+          end
         end
       end
     end   
+
+    def listen(pattern, responder)
+      @parts << [pattern, responder]
+    end
+
   end
 
 end

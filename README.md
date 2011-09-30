@@ -15,18 +15,7 @@ a class as follows:
 
   class HelloPart
     def process(message, room)
-      if match?(message)
-        puts message.body
-        room.speak("MG Hotdog says hello #{message.user.name}") 
-      end
-    end
-
-    def match?(message)
-      ! message.body.match(pattern).nil?
-    end
-
-    def pattern
-      Regexp.new(/Hello mg_hotdog.*/)
+      room.speak("MG Hotdog says hello #{message.user.name}") 
     end
   end
 
@@ -37,7 +26,7 @@ You can then add the part to the robot by editing bin/mg_hotdog
 ```ruby
 
 require 'mg_hotdog/parts/hello_part'
-robot.parts << HelloPart.new
+robot.listen /hello mg_hotdog/i, HelloPart.new
 
 ```
 And that is all it takes. 
