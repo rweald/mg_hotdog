@@ -2,7 +2,7 @@ module MgHotdog
 
   class HelloPart < Part
     def process(message, room)
-      if match?(message)
+      if match?(message, pattern)
         puts message.body
         room.speak("MG Hotdog says hello #{message.user.name}") 
       end
