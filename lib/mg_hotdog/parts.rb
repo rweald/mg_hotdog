@@ -5,9 +5,18 @@ module MgHotdog
   # class and then add yourself to the brain
   class Part
     def process(message, room = nil)
-      room.speak("Hello World this is MG HOTDOG") 
+      #Do Something
+    end
+
+    def match?(message)
+      puts message.body.inspect
+      return false unless message.body
+      ! message.body.match(pattern).nil?
+    end
+
+    def pattern
+      #The regex that you want to match against to run your rule
     end
   end
-
 end
 
