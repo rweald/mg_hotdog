@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
 
 require 'mg_hotdog'
 
-def mock_message_and_room
+def mock_message_and_robot
         @robot = double()
 
         @user = double()

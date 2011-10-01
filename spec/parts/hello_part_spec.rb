@@ -6,12 +6,11 @@ module MgHotDog
   describe HelloPart do
     describe "#process" do
       before :each do
-        mock_message_and_room
+        mock_message_and_robot
       end
-      it "should say hello" do
+      it "should say hello to the author of the message" do
 
-        @robot.should_receive(:speak).with(/Hello/)
-
+        @robot.should_receive(:speak).with(/Hello #{@user.name}/)
         HelloPart.new.process(@message, @robot)
       end
     end
