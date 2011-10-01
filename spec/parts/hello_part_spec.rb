@@ -10,7 +10,7 @@ module MgHotDog
       end
       it "should say hello" do
 
-        @room.should_receive(:speak).with(/Hello/)
+        @robot.should_receive(:speak).with(/Hello/)
 
         HelloPart.new.process(@message, @robot)
       end

@@ -4,8 +4,6 @@ require 'mg_hotdog'
 
 def mock_message_and_room
         @robot = double()
-        @room = double()
-        @robot.stub(:room).and_return(@room)
 
         @user = double()
         @user.stub(:name).and_return('bob')
