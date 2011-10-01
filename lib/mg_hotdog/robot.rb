@@ -25,6 +25,9 @@ module MgHotdog
       @parts << [pattern, responder]
     end
 
+    def speak message
+      @room.speak message
+    end
   end
 
 end
