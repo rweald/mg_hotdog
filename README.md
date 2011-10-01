@@ -2,7 +2,7 @@
 He's smart, sexy, and always available
 
 ## Getting Him Running
-1) Define CAMPFIRE_TOKEN and CAMPFIRE_ROOM environmental variables
+1) Define CAMPFIRE_TOKEN and CAMPFIRE_ROOM environmental variables  
 2) run bin/mg_hotdog  
 3) Talk to him  
 
