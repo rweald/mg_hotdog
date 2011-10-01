@@ -1,7 +1,6 @@
 require 'spec_helper'
 require 'mg_hotdog/parts/hello_part'
 
-module MgHotDog
 
   describe HelloPart do
     describe "#process" do
@@ -15,5 +14,4 @@ module MgHotDog
       end
     end
   end
-end
 
