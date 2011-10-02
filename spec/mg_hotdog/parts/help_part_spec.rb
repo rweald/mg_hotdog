@@ -10,6 +10,7 @@ describe HelpPart do
     it "should identify itself" do
       @robot.should_receive(:speak).with(/I AM THE MAGNESIUM HOTDOG/)
       HelpPart.new.process(@message, @robot)
+      
     end
 
   end
