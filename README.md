@@ -2,6 +2,7 @@
 He's smart, sexy, and always available
 
 ## Getting Him Running
+1) Define CAMPFIRE_TOKEN and CAMPFIRE_ROOM environmental variables  
 2) run bin/mg_hotdog  
 3) Talk to him  
 
@@ -14,8 +15,8 @@ a class as follows:
 ```ruby
 
   class HelloPart
-    def process(message, room)
-      room.speak("MG Hotdog says hello #{message.user.name}") 
+    def process(message, robot)
+      robot.speak("MG Hotdog says hello #{message.user.name}") 
     end
   end
 
